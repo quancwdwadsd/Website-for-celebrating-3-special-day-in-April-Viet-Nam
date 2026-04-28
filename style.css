@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    font-family: "Playfair display";
+}
+
+.fancy-title{
+    font-family: "Playwrite DE SAS", cursive;
+    font-size: 80px;
+    color: rgb(196, 18, 10);
+    font-weight: 400;
+}
+
+.unfancy-title{
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    color: rgb(124, 7, 6);
+    /* color: #000; */
+    font-size: 50px;
+}
+
+.title-text{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    /* padding-top: 20px; */
+}
+
+.btns{
+    padding-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.title-red-btn{
+    background-color: rgb(196, 18, 10);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.title-white-btn{
+    background: none;
+    color: rgb(196, 18, 10);
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(196, 18, 10);
+    border-radius: 5px;
+}
+
+.banner{
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    justify-content: baseline;
+    height: 60vh;
+    gap: 10px;
+    background-image: url(/assets/banner\ background\ .png);
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    background-color: rgb(126, 22, 22);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid #000; */
+    height: 80px;
+    position: absolute;
+}
+
+.logo{
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo .logo-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header .nav a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: large;
+    margin-left: 40px;
+}
+
+header .nav a:nth-child(6){
+    padding-right: 50px;
+}
+
+.countdown {
+    height: 58vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    background-image: url(/assets/Countdown\ background.png);
+    background-size: cover;
+}
+
+.countdown h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.countdown .holidays{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.gio-to{
+    background: url(/assets/Countdown\ giỗ\ tổ.png);
+    background-size: cover;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.gio-to .title{
+    text-align: center;
+    margin-left: 110px;
+    padding-top: 50px;
+    line-height: 0.8;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.gio-to .timer{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 20px;
+    text-align: center;
+}
+
+.timerBox {
+    background-color: #00000057;
+    padding: 18px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.giai-phong{
+    background: url(/assets/Background\ giải\ phóng.png);
+    background-size: cover;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    /* border: 1px solid rgb(34, 134, 249); */
+}
+
+.giai-phong .title{
+    text-align: center;
+    margin-left: 110px;
+    padding-top: 50px;
+    line-height: 0.85;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.giai-phong .timer{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    gap: 20px;
+    text-align: center;
+}
+
+.lao-dong {
+    background: url(/assets/Lao\ động\ background.png);
+    background-size: cover;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.lao-dong .title{
+    text-align: center;
+    margin-left: 110px;
+    padding-top: 50px;
+    line-height: 0.85;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.lao-dong .timer{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    gap: 20px;
+    text-align: center;
+}
+
+.learn-more{
+    background-color: rgb(251, 240, 222);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.learn-more .cards{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+} 

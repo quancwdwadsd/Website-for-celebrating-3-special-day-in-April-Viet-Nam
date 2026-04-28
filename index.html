@@ -4,109 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+DE+SAS:wght@100..400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="" alt="">
-            <h3>Tháng 4</h3>
-            <h4>TỰ HÀO DÂN TỘC</h4>
-        </div>
-        <div class="nav">
-            <a href="">Trang chủ</a>
-            <a href="">Giới thiệu</a>
-            <a href="">Countdown</a>
-            <a href="">Thư viện</a>
-            <a href="">Quiz</a>
-            <a href="">Liên hệ</a>
+        <div class="navbar">
+            <div class="logo">
+                <img src="/assets/logo.png" alt="">
+                <div class="logo-subtext">
+                    <h3 class="logo-text">Tháng 4</h3>
+                    <h4 class="logo-text">TỰ HÀO DÂN TỘC</h4>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="">Trang chủ</a>
+                <a href="">Giới thiệu</a>
+                <a href="">Countdown</a>
+                <a href="">Thư viện</a>
+                <a href="">Quiz</a>
+                <a href="">Liên hệ</a>
+            </div>
         </div>
     </header>
     <main>
         <div class="banner">
-            <img src="/assets/Header background.png" alt="hedaer background">
-            <h1>Tháng 4</h1>
-            <h1>THÁNG CỦA LỊCH SỬ VÀ TỰ HÀO</h1>
-            <p> kỷ niệm 3 ngày lễ lớn của dân tộc Việt Nam - <br> nhắc nhở truyền thống, tri ân quá khứ, hướng tới tương lai</p>
+            <h1 class="fancy-title">Tháng 4</h1>
+            <h1 class="unfancy-title">THÁNG CỦA LỊCH SỬ VÀ TỰ HÀO</h1>
+            <p class="title-text"> kỷ niệm 3 ngày lễ lớn của dân tộc Việt Nam - <br> nhắc nhở truyền thống, tri ân quá khứ, hướng tới tương lai</p>
             <div class="btns">
-                <button class="red-btn">Khám phá ngay</button>
-                <button class="white-btn">Xem countdown</button>
+                <button class="title-red-btn">Khám phá ngay</button>
+                <button class="title-white-btn">Xem countdown</button>
             </div>
         </div>
         <div class="countdown">
             <h2>ĐẾM NGƯỢC ĐẾN 3 NGÀY LỄ LỚN</h2>
-            <div class="gio-to">
-                <div class="title">
-                    <img src="" alt="">
-                    <p>GIỖ TỔ HÙNG VƯƠNG</p><br>
-                    <p>10/3 ÂM LỊCH</p>
-                </div>
-                <div class="timer">
-                    <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Ngày</p>
+            <div class="holidays">
+
+                <div class="gio-to">
+                    <div class="title">
+                        <p>GIỖ TỔ HÙNG VƯƠNG</p><br>
+                        <p>10/3 ÂM LỊCH</p>
                     </div>
-                     <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Giờ</p>
-                    </div>
-                     <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Phút</p>
-                    </div>
-                     <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Giây</p>
-                    </div>
-                </div>
-            </div>
-            <div class="giai-phong">
-                <div class="title">
-                    <img src="" alt="">
-                    <p>NGÀY GIẢI PHÓNG MIỀN NAM</p><br>
-                    <p>30/4</p>
-                </div>
-                <div class="timer">
-                    <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Ngày</p>
-                    </div>
-                     <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Giờ</p>
-                    </div>
-                     <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Phút</p>
-                    </div>
-                     <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Giây</p>
+                    <div class="timer">
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Ngày</p>
+                        </div>
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Giờ</p>
+                        </div>
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Phút</p>
+                        </div>
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Giây</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="lao-dong">
-                <div class="title">
-                    <img src="" alt="">
-                    <p>QUỐC TẾ LAO ĐỘNG</p><br>
-                    <p>1/5 ÂM LỊCH</p>
+                <div class="giai-phong">
+                    <div class="title">
+                        <p>NGÀY GIẢI PHÓNG MIỀN NAM</p><br>
+                        <p>30/4</p>
+                    </div>
+                    <div class="timer">
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Ngày</p>
+                        </div>
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Giờ</p>
+                        </div>
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Phút</p>
+                        </div>
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Giây</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="timer">
-                    <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Ngày</p>
+                <div class="lao-dong">
+                    <div class="title">
+                        <p>QUỐC TẾ LAO ĐỘNG</p><br>
+                        <p>1/5 ÂM LỊCH</p>
                     </div>
-                     <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Giờ</p>
-                    </div>
-                     <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Phút</p>
-                    </div>
-                     <div class="timerBox">
-                        <p class="time"> - </p>
-                        <p>Giây</p>
+                    <div class="timer">
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Ngày</p>
+                        </div>
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Giờ</p>
+                        </div>
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Phút</p>
+                        </div>
+                        <div class="timerBox">
+                            <p class="time"> - </p>
+                            <p>Giây</p>
+                        </div>
                     </div>
                 </div>
             </div>
