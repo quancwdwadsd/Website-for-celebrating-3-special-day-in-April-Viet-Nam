@@ -134,6 +134,9 @@ header .nav a:nth-child(6){
 .countdown h2{
     font-size: 30px;
     font-weight: 600;
+    animation: fadeIn 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0;
 }
 
 .countdown .holidays{
@@ -233,10 +236,121 @@ header .nav a:nth-child(6){
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 700px;
+}
+
+.learn-more h2{
+    padding-top: 20px;
+    font-size: 30px;
 }
 
 .learn-more .cards{
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    gap: 40px;
 } 
+
+.card{
+    width: 400px;
+    height: 550px;
+    background-color: rgb(251, 232, 201);
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding:0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img{
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-description{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.card .gio-to-card-title{
+    color: rgb(197, 55, 49);
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.card .giai-phong-card-title{
+    color: rgb(34, 134, 249);
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.card .lao-dong-card-title{
+    color: rgb(34, 181, 10);
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.red-card-btn{
+    background: none;
+    color: rgb(196, 18, 10);
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(196, 18, 10);
+    border-radius: 5px;
+}
+
+.blue-card-btn{
+    background: none;
+    color: rgb(34, 134, 249);
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(34, 134, 249);
+    border-radius: 5px;
+}
+
+.green-card-btn{
+    background: none;
+    color: rgb(34, 181, 10);
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(34, 181, 10);
+    border-radius: 5px;
+}
+
+.event-timeline{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+    gap: 30px;
+    background-color: rgb(251, 240, 222);
+}
+
+.timeline{
+    position: relative;
+    display: flex;
+    gap: 60px;
+}
+
+.timeline-item:not(:last-child)::after{
+    position: absolute;
+    content: "";
+    top:20px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ccc;
+    z-index: 0;
+}
