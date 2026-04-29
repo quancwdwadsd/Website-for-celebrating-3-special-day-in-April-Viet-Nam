@@ -247,7 +247,7 @@ header .nav a:nth-child(6){
 .learn-more .cards{
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 50px;    
     gap: 40px;
 } 
 
@@ -353,4 +353,31 @@ header .nav a:nth-child(6){
     height: 3px;
     background: #ccc;
     z-index: 0;
+}
+
+.interactions{
+    background-color: rgb(251, 240, 222);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.interactions h2{
+    font-size: 30px;
+
+}
+
+.interactions-elements{
+    padding-top: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.interaction-element{
+    background-color: rgb(254, 248, 238);
+    padding: 30px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
