@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+img{
+    max-width: 100%;
+    display: block;
+}
+
+body{
+    overflow-x: hidden;
+}
+
 header{
     position: relative;
     width: 100%;
@@ -342,14 +351,15 @@ header .nav a:nth-child(6){
     position: relative;
     display: flex;
     gap: 60px;
+    isolation: isolate;
 }
 
-.timeline-item:not(:last-child)::after{
+.timeline::before{
     position: absolute;
     content: "";
-    top:20px;
-    left: 0;
-    width: 100%;
+    top: 48px;
+    left: 50px;
+    right: 50px;
     height: 3px;
     background: #ccc;
     z-index: 0;
@@ -362,6 +372,7 @@ header .nav a:nth-child(6){
     align-items: center;
     justify-content: center;
     padding: 60px;
+    width: 100%;
 }
 
 .interactions h2{
@@ -372,7 +383,7 @@ header .nav a:nth-child(6){
 .interactions-elements{
     padding-top: 20px;
     display: flex;
-    gap: 40px;
+    gap: 15px;
 }
 
 .interaction-element{
@@ -380,4 +391,538 @@ header .nav a:nth-child(6){
     padding: 30px 60px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 200px;
+}
+
+.timeline-item{
+    display: flex;
+    position: relative;
+    width: 400px;
+    gap: 10px;
+    z-index: 1;
+    background-color: rgb(251, 240, 222);
+}
+
+.timeline-item .circle,
+.timeline-item .timeline-content{
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-item .circle img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.event-timeline h2{
+    font-size: 30px;
+}
+
+.interaction-element .quiz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 25px;
+    
+}
+
+.quiz h3 {
+    font-size: 20px;
+    color: rgb(196, 18, 10);
+}
+
+.quiz .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quiz .detail button{
+    background: none;
+    color: rgb(196, 18, 10);
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(196, 18, 10);
+    border-radius: 5px;
+}
+
+
+.vote { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 25px;
+}
+
+.vote h3 {
+    font-size: 20px;
+    color: rgb(27, 141, 9);
+}
+
+.vote .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.vote .detail button{
+    background: none;
+    color: rgb(27, 141, 9);
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(27, 141, 9);
+    border-radius: 5px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 25px;
+}
+
+
+.gallery h3 {
+    font-size: 20px;
+    color: rgb(34, 134, 249);
+}
+
+.gallery .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.gallery .detail button{
+    background: none;
+    color: rgb(34, 134, 249);
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(34, 134, 249);
+    border-radius: 5px;
+}
+
+.events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 25px;
+}
+
+.events h3 {
+    font-size: 20px;
+    color: rgb(34, 134, 249);
+
+}
+
+.events .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.events button {
+    background: none;
+    color: rgb(34, 134, 249);
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid rgb(34, 134, 249);
+    border-radius: 5px;
+}
+
+footer {
+    background-color: rgb(99, 2, 11);
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+footer img{
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+footer .summary{
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+    border-right: 1px solid #ffffffbf;
+}
+
+footer .summary .text{
+    width: 600px;
+    margin-right: 300px;
+}
+
+footer .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+footer .contact .icons img{
+    width: 30px;
+    height: auto;
+}
+
+footer .contact .icons{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+@media (max-width: 1200px){
+    .navbar{
+        padding: 16px 20px;
+        gap: 20px;
+    }
+
+    header .nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    header .nav a{
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .banner{
+        min-height: 70vh;
+        height: auto;
+        padding: 120px 20px 60px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .fancy-title{
+        font-size: 68px;
+    }
+
+    .unfancy-title{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .title-text{
+        text-align: center;
+        max-width: 760px;
+    }
+
+    .countdown{
+        height: auto;
+        min-height: 58vh;
+        padding: 50px 20px;
+    }
+
+    .countdown .holidays,
+    .learn-more .cards,
+    .interactions-elements{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gio-to,
+    .giai-phong,
+    .lao-dong,
+    .card,
+    .timeline-item,
+    .interaction-element{
+        max-width: 100%;
+    }
+
+    .learn-more{
+        height: auto;
+        min-height: 700px;
+    }
+
+    .timeline{
+        width: min(1240px, calc(100% - 40px));
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .timeline-item{
+        width: calc(50% - 20px);
+    }
+
+    .interactions{
+        width: 100%;
+    }
+
+    .interaction-element{
+        width: calc(50% - 10px);
+        height: auto;
+        min-height: 200px;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    footer .summary{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ffffffbf;
+        justify-content: center;
+    }
+
+    footer .summary .text{
+        width: min(600px, 100%);
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 900px){
+    header{
+        height: auto;
+    }
+
+    .navbar{
+        position: static;
+        flex-direction: column;
+        height: auto;
+        padding: 16px;
+    }
+
+    .logo{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header .nav{
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    header .nav a{
+        margin-left: 0;
+    }
+
+    header .nav a:nth-child(6){
+        padding-right: 0;
+    }
+
+    .banner{
+        min-height: auto;
+        padding-top: 50px;
+    }
+
+    .fancy-title{
+        font-size: 56px;
+    }
+
+    .unfancy-title{
+        font-size: 34px;
+    }
+
+    .title-text{
+        font-size: 15px;
+    }
+
+    .btns{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .countdown h2,
+    .learn-more h2,
+    .event-timeline h2,
+    .interactions h2{
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .timeline{
+        width: min(720px, calc(100% - 32px));
+    }
+
+    .timeline::before{
+        top: 0;
+        bottom: 0;
+        left: 50px;
+        right: auto;
+        width: 3px;
+        height: auto;
+    }
+
+    .timeline-item{
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .interaction-element{
+        width: 100%;
+    }
+
+    footer .summary{
+        padding: 40px 24px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .contact{
+        padding: 40px 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px){
+    .banner{
+        padding: 40px 16px;
+        gap: 16px;
+    }
+
+    .fancy-title{
+        font-size: 42px;
+    }
+
+    .unfancy-title{
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
+    .title-text{
+        font-size: 14px;
+    }
+
+    .title-red-btn,
+    .title-white-btn,
+    .red-card-btn,
+    .blue-card-btn,
+    .green-card-btn,
+    .quiz .detail button,
+    .vote .detail button,
+    .gallery .detail button,
+    .events button{
+        width: 100%;
+    }
+
+    .countdown{
+        padding: 40px 16px;
+    }
+
+    .countdown .holidays{
+        padding-top: 30px;
+    }
+
+    .gio-to,
+    .giai-phong,
+    .lao-dong{
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+        padding: 24px 16px;
+    }
+
+    .gio-to .title,
+    .giai-phong .title,
+    .lao-dong .title{
+        margin-left: 0;
+        padding-top: 0;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .gio-to .timer,
+    .giai-phong .timer,
+    .lao-dong .timer{
+        margin-top: 24px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .timerBox{
+        padding: 12px;
+        min-width: 70px;
+    }
+
+    .learn-more{
+        padding: 20px 16px 40px;
+    }
+
+    .learn-more .cards{
+        padding-top: 30px;
+        gap: 24px;
+    }
+
+    .card{
+        width: 100%;
+        height: auto;
+        padding-bottom: 24px;
+    }
+
+    .card-description{
+        line-height: 1.6;
+    }
+
+    .event-timeline{
+        padding: 40px 16px;
+    }
+
+    .timeline{
+        width: 100%;
+    }
+
+    .timeline::before{
+        left: 40px;
+    }
+
+    .timeline-item{
+        gap: 14px;
+        width: 100%;
+    }
+
+    .timeline-item .circle img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .interactions{
+        padding: 40px 16px;
+    }
+
+    .interaction-element{
+        padding: 24px 20px;
+    }
+
+    .interaction-element .quiz,
+    .vote,
+    .gallery,
+    .events{
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    footer .summary,
+    footer .contact{
+        padding: 32px 16px;
+    }
 }
