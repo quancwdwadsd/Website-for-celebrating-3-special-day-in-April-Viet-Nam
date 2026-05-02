@@ -13,6 +13,12 @@ body{
     overflow-x: hidden;
 }
 
+:root{
+    --ease-bounce: cubic-bezier(0.22, 1, 0.36, 1);
+    --soft-shadow: 0 10px 24px rgba(124, 7, 6, 0.14);
+    --strong-shadow: 0 18px 38px rgba(124, 7, 6, 0.2);
+}
+
 header{
     position: relative;
     width: 100%;
@@ -68,6 +74,76 @@ header{
     cursor: pointer;
     border: 2px solid rgb(196, 18, 10);
     border-radius: 5px;
+}
+
+.title-red-btn,
+.title-white-btn,
+.red-card-btn,
+.blue-card-btn,
+.green-card-btn,
+.quiz .detail button,
+.vote .detail button,
+.gallery .detail button,
+.events button{
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.28s var(--ease-bounce), box-shadow 0.28s ease, background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.title-red-btn::before,
+.title-white-btn::before,
+.red-card-btn::before,
+.blue-card-btn::before,
+.green-card-btn::before,
+.quiz .detail button::before,
+.vote .detail button::before,
+.gallery .detail button::before,
+.events button::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.38) 45%, transparent 100%);
+    transform: translateX(-130%);
+    transition: transform 0.6s ease;
+}
+
+.title-red-btn:hover,
+.title-white-btn:hover,
+.red-card-btn:hover,
+.blue-card-btn:hover,
+.green-card-btn:hover,
+.quiz .detail button:hover,
+.vote .detail button:hover,
+.gallery .detail button:hover,
+.events button:hover{
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--soft-shadow);
+}
+
+.title-red-btn:hover::before,
+.title-white-btn:hover::before,
+.red-card-btn:hover::before,
+.blue-card-btn:hover::before,
+.green-card-btn:hover::before,
+.quiz .detail button:hover::before,
+.vote .detail button:hover::before,
+.gallery .detail button:hover::before,
+.events button:hover::before{
+    transform: translateX(130%);
+}
+
+.title-red-btn:active,
+.title-white-btn:active,
+.red-card-btn:active,
+.blue-card-btn:active,
+.green-card-btn:active,
+.quiz .detail button:active,
+.vote .detail button:active,
+.gallery .detail button:active,
+.events button:active{
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .banner{
@@ -272,6 +348,34 @@ header .nav a:nth-child(6){
     padding: 20px;
     padding:0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.38s var(--ease-bounce), box-shadow 0.38s ease, border-color 0.38s ease;
+    transform-origin: center bottom;
+    border: 1px solid transparent;
+}
+
+.card:hover{
+    transform: translateY(-12px) rotate(-0.6deg);
+    box-shadow: var(--strong-shadow);
+    border-color: rgba(196, 18, 10, 0.18);
+}
+
+.card:nth-child(2):hover{
+    transform: translateY(-12px) rotate(0.6deg);
+    border-color: rgba(34, 134, 249, 0.2);
+}
+
+.card:nth-child(3):hover{
+    transform: translateY(-12px) rotate(-0.35deg);
+    border-color: rgba(34, 181, 10, 0.2);
+}
+
+.card img{
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.card:hover img{
+    transform: scale(1.04);
+    filter: saturate(1.08);
 }
 
 .card img{
@@ -588,7 +692,51 @@ footer .contact .icons{
     gap: 20px;
 }
 
+@media (prefers-reduced-motion: reduce){
+    .title-red-btn,
+    .title-white-btn,
+    .red-card-btn,
+    .blue-card-btn,
+    .green-card-btn,
+    .quiz .detail button,
+    .vote .detail button,
+    .gallery .detail button,
+    .events button,
+    .card,
+    .card img{
+        transition: none;
+    }
 
+    .title-red-btn::before,
+    .title-white-btn::before,
+    .red-card-btn::before,
+    .blue-card-btn::before,
+    .green-card-btn::before,
+    .quiz .detail button::before,
+    .vote .detail button::before,
+    .gallery .detail button::before,
+    .events button::before{
+        display: none;
+    }
+
+    .title-red-btn:hover,
+    .title-white-btn:hover,
+    .red-card-btn:hover,
+    .blue-card-btn:hover,
+    .green-card-btn:hover,
+    .quiz .detail button:hover,
+    .vote .detail button:hover,
+    .gallery .detail button:hover,
+    .events button:hover,
+    .card:hover,
+    .card:nth-child(2):hover,
+    .card:nth-child(3):hover,
+    .card:hover img{
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        filter: none;
+    }
+}
 
 @media (max-width: 1200px){
     .navbar{
