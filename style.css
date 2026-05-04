@@ -220,8 +220,6 @@ header .nav a:nth-child(6){
     font-size: 30px;
     font-weight: 600;
     animation: fadeIn 1s ease-in-out;
-    animation-timeline: view();
-    animation-range: entry 0;
 }
 
 .countdown .holidays{
@@ -375,7 +373,6 @@ header .nav a:nth-child(6){
 
 .card:hover img{
     transform: scale(1.04);
-    filter: saturate(1.08);
 }
 
 .card img{
@@ -455,7 +452,6 @@ header .nav a:nth-child(6){
     position: relative;
     display: flex;
     gap: 60px;
-    isolation: isolate;
 }
 
 .timeline::before{
